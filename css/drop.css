@@ -1,0 +1,29 @@
+ul, li {
+    margin: 0;
+    padding: 0;
+}
+.dropdown {
+    overflow: hidden;
+    width: 400px;
+}
+.dropdownItem {
+    display: inline-block;
+    cursor: pointer;
+}
+.dropdownItem, .itemContent li {
+    width: 400px;
+    border: 1px solid #ccc;
+    height: 35px;
+    line-height: 35px;
+}
+.itemContent li {
+    padding-left: 40px;
+}
+.dropdownItem .glyphicon {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.checkItem {
+    float: right;
+    margin-right: 10px;
+}
