@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>树形图</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/base.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/handlebars-v4.0.5.js"></script>
+    <script src='js/tree.js'></script>
+</head>
+<body>
+<div id="treeDemo" class="treeDemo"></div>
+<script type="text/x-handlebars-template" id="template">
+        <ul>
+            <li>
+                <span class="glyphicon glyphicon-plus-sign"></span>
+                <input type="checkbox">
+                <label for="">{{deptName}}</label>
+                {{#each data.children}}
+                    <ul class="dn">
+                        <li>
+                        
+                        <span class="glyphicon glyphicon-plus-sign"></span>
+                        
+                        <input type="checkbox">
+                        <label for="">{{deptName}}</label>
+                        </li>
+                    </ul>
+                {{/each}}
+            </li>
+        </ul>
+</script>
+
+    <!-- <ul>
+        <li>
+            <span class="glyphicon glyphicon-plus-sign"></span>
+            <input type="checkbox">
+            <label for="">父</label>
+            <ul class="dn">
+                <li>
+                    <span class="glyphicon glyphicon-plus-sign"></span>
+                    <input type="checkbox">
+                    <label for="">子</label>
+                    <ul class="dn">
+                        <li>
+                            <span class="glyphicon glyphicon-plus-sign"></span>
+                            <input type="checkbox">
+                            <label for="">曾孙</label>
+                            <ul class="dn">
+                                <li>
+                                    <span class="glyphicon glyphicon-plus-sign"></span>
+                                    <input type="checkbox">
+                                    <label for="">曾曾孙1</label>
+                                </li>
+                                <li>
+                                    <span class="glyphicon glyphicon-plus-sign"></span>
+                                    <input type="checkbox">
+                                    <label for="">曾曾孙2</label>
+                                </li>
+                                <li>
+                                    <span class="glyphicon glyphicon-plus-sign"></span>
+                                    <input type="checkbox">
+                                    <label for="">曾曾孙3</label>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul> -->
+</body>
+</html>
