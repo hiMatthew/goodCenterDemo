@@ -20,19 +20,31 @@
                 <ul class="dn">
                     {{#each children}}                  
                             <li>
-                            <span class="glyphicon glyphicon-plus-sign"></span>      
+                            {{#hasChildren children}}
+                            <span class="glyphicon glyphicon-plus-sign"></span>
+                            {{else}}
+                            <span class="slot"></span>
+                            {{/hasChildren}}      
                             <input type="checkbox">
                             <label for="">{{deptName}}</label>
                                 <ul class="dn">
                                     {{#each children}}
                                         <li>                                    
-                                            <span class="glyphicon glyphicon-plus-sign"></span>      
+                                            {{#hasChildren children}}
+                                            <span class="glyphicon glyphicon-plus-sign"></span>
+                                            {{else}}
+                                            <span class="slot"></span>
+                                            {{/hasChildren}}      
                                             <input type="checkbox">
                                             <label for="">{{deptName}}</label>
                                             <ul class="dn">
                                             {{#each children}}
                                                 <li>
-                                                    <span class="glyphicon glyphicon-plus-sign"></span>      
+                                                    {{#hasChildren children}}
+                                                    <span class="glyphicon glyphicon-plus-sign"></span>
+                                                    {{else}}
+                                                    <span class="slot"></span>
+                                                    {{/hasChildren}}       
                                                     <input type="checkbox">
                                                     <label for="">{{deptName}}</label>
                                                 </li>

@@ -3020,6 +3020,15 @@ $(function() {
         success: true,
         failed: false
     };
+    Handlebars.registerHelper("hasChildren",function(children,options){
+           if(children.length!=0){
+             //满足添加继续执行
+             return options.fn(this);
+           }else{
+             //不满足条件执行{{else}}部分
+             return options.inverse(this);
+           }
+    });
     var myTemplate = Handlebars.compile($("#template").html());
     $('#treeDemo').html(myTemplate(data.data[0]));
 });
