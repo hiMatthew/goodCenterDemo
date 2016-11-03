@@ -17,17 +17,33 @@
                 <span class="glyphicon glyphicon-plus-sign"></span>
                 <input type="checkbox">
                 <label for="">{{deptName}}</label>
-                {{#each data.children}}
-                    <ul class="dn">
-                        <li>
-                        
-                        <span class="glyphicon glyphicon-plus-sign"></span>
-                        
-                        <input type="checkbox">
-                        <label for="">{{deptName}}</label>
-                        </li>
-                    </ul>
-                {{/each}}
+                <ul class="dn">
+                    {{#each children}}                  
+                            <li>
+                            <span class="glyphicon glyphicon-plus-sign"></span>      
+                            <input type="checkbox">
+                            <label for="">{{deptName}}</label>
+                                <ul class="dn">
+                                    {{#each children}}
+                                        <li>                                    
+                                            <span class="glyphicon glyphicon-plus-sign"></span>      
+                                            <input type="checkbox">
+                                            <label for="">{{deptName}}</label>
+                                            <ul class="dn">
+                                            {{#each children}}
+                                                <li>
+                                                    <span class="glyphicon glyphicon-plus-sign"></span>      
+                                                    <input type="checkbox">
+                                                    <label for="">{{deptName}}</label>
+                                                </li>
+                                            {{/each}}
+                                            </ul>
+                                        </li>
+                                    {{/each}}
+                                </ul>
+                            </li>
+                    {{/each}}
+                </ul>
             </li>
         </ul>
 </script>
